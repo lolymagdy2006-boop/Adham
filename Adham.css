@@ -1,0 +1,346 @@
+/* ========== GLOBAL ========== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #e9efff 0%, #dde6ff 100%);
+  color: #1e293b;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: rgba(245,248,255,0.95);
+  backdrop-filter: blur(10px);
+  padding: 18px 40px;
+  border-bottom: 1px solid #c7d4ff;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #183aa8;
+}
+
+/* ========== HERO ========== */
+.hero {
+  text-align: center;
+  padding: 90px 20px 70px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  background: linear-gradient(90deg,#183aa8,#2f55d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 12px;
+  color: #334155;
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+  width: 80%;
+  margin: 0 auto 120px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(#1f4ed8, #5f8cff);
+}
+
+/* ========== MODULE WRAPPER ========== */
+.module {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 70px;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* ========== MODULE NUMBER ========== */
+.module-number {
+  min-width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1f4ed8, #3f63ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(31,78,216,0.45);
+  font-size: 18px;
+}
+
+/* ========== MODULE CONTENT ========== */
+.module-content {
+  background: #f9fbff;
+  border: 1px solid #c7d4ff;
+  border-radius: 18px;
+  padding: 30px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(31,78,216,0.18);
+}
+
+/* ========== MODULE TEXT ========== */
+.module-text {
+  flex: 1;
+}
+
+.module-text h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #1e3a8a;
+  font-size: 22px;
+}
+
+.module-text p {
+  color: #334155;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  max-width: 92%;
+}
+
+/* ========== MODULE IMAGE ========== */
+.module-image {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.module-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease;
+}
+
+.module-content:hover .module-image img {
+  transform: scale(1.05);
+}
+
+/* ========== BUTTON ========== */
+.module-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #1f4ed8, #3f63ff);
+  color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.module-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(31,78,216,0.4);
+}
+
+/* ========== BLOCKS ========== */
+.block {
+  width: 80%;
+  margin: 0 auto 120px;
+}
+
+.block-title {
+  font-size: 26px;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+/* ========== ACTION GRID (FIXED 2 BOXES) ========== */
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ========== ACTION CARDS ========== */
+.action-card {
+  background: #f9fbff;
+  border: 1px solid #c7d4ff;
+  border-radius: 20px;
+  padding: 35px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(31,78,216,0.18);
+}
+
+.action-card h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+.action-card p {
+  color: #334155;
+}
+
+.action-card.highlight {
+  border: 1px solid #1f4ed8;
+  box-shadow: 0 0 18px rgba(31,78,216,0.4);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: #e4ebff;
+  color: #334155;
+  border-top: 1px solid #c7d4ff;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .timeline {
+    width: 90%;
+  }
+
+  .block {
+    width: 90%;
+  }
+
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========== FINAL TEST ACTION GRID FULL WIDTH ========== */
+.block .action-grid.full-width {
+  width: 172vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0 10%;
+}
+
+
+/* ========== COURSE STATS ========== */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 60px 20px 80px;
+  background: rgba(255,255,255,0.35);
+  border-top: 1px solid #ccd8ff;
+  border-bottom: 1px solid #ccd8ff;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f4ed8;
+  margin-bottom: 6px;
+}
+
+.stat-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+
+
+/* ========== AUTO CAROUSEL ========== */
+.auto-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 0 80px;
+  background: linear-gradient(180deg, #eef3ff, #e4ebff);
+  border-bottom: 1px solid #ccd8ff;
+}
+
+.carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  padding-left: 10%;
+  will-change: transform;
+}
+
+.carousel-card {
+  min-width: 220px;
+  background: #f9fbff;
+  border: 1px solid #c7d4ff;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(31,78,216,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.carousel-card span {
+  display: block;
+  padding: 14px;
+  text-align: center;
+}
+
+.carousel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(31,78,216,0.25);
+}
+
+.carousel-card.highlight {
+  border: 2px solid #1f4ed8;
+}
+
+
